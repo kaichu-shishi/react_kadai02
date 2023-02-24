@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import { Omikuji } from "./pages/Omikuji";
 import { Janken } from "./pages/Janken";
-
 import { BookCreate } from "./pages/BookCreate";
+import { SpeechToText } from "./pages/SpeechToText";
+
 
 
 const App = () => {
@@ -19,12 +21,16 @@ const App = () => {
         <li>
           <Link to="/book-create">投稿する</Link>
         </li>
+        <li>
+          <Link to="/speech-to-text">音声認識機能を使う</Link>
+        </li>
       </ul>
       <hr />
       <Routes>
         <Route path="/omikuji" element={<Omikuji />} />
         <Route path="/janken" element={<Janken />} />
         <Route path="/book-create" element={<BookCreate />} />
+        <Route path="/speech-to-text" element={<SpeechToText />} />
       </Routes>
     </BrowserRouter>
   );
